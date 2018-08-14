@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="automapper" Version="7.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infra\Cross\DDD.Infra.Cross.AspNetMvc\DDD.Infra.Cross.AspNetMvc.csproj" />
+    <ProjectReference Include="..\..\Infra\Cross\DDD.Infra.Cross.DomainDriver.Mvc\DDD.Infra.Cross.DomainDriver.Mvc.csproj" />
+    <ProjectReference Include="..\..\Infra\Cross\DDD.Infra.Cross.DomainDriver\DDD.Infra.Cross.DomainDriver.csproj" />
+  </ItemGroup>
+
+</Project>

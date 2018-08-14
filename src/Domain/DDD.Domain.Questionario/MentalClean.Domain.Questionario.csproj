@@ -9,8 +9,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <AssemblyName>DDD.Domain.Questionario</AssemblyName>
-    <RootNamespace>DDD.Domain.Questionario</RootNamespace>
+    <AssemblyName>MentalClean.Domain.Questionario</AssemblyName>
+    <RootNamespace>MentalClean.Domain.Questionario</RootNamespace>
   </PropertyGroup>
 
   <!--<ItemGroup>

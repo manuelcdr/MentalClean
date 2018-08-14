@@ -24,7 +24,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\Data\DDD.Data.Questionario\DDD.Data.Questionario.csproj" />
     <ProjectReference Include="..\..\..\Domain\DDD.Domain.Core\DDD.Domain.Core.csproj" />
-    <ProjectReference Include="..\..\..\Domain\DDD.Domain.Questionario\DDD.Domain.Questionario.csproj" />
+    <ProjectReference Include="..\..\..\Domain\DDD.Domain.Questionario\MentalClean.Domain.Questionario.csproj" />
     <ProjectReference Include="..\DDD.Infra.Cross.DomainDriver\DDD.Infra.Cross.DomainDriver.csproj" />
     <ProjectReference Include="..\DDD.Infra.Cross.AspNetMvc\DDD.Infra.Cross.AspNetMvc.csproj" />
     <ProjectReference Include="..\DDD.Infra.Cross.Common\DDD.Infra.Cross.Common.csproj" />
