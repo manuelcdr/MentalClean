@@ -2,7 +2,7 @@
 using DDD.Infra.Cross.DomainDriver.Abstractions;
 using System;
 
-namespace DDD.Domain.Test.Processos.Entities
+namespace MentalClean.Domain.Questionario.Entities
 {
     public class Fruta : DefaultEntity<Fruta>, IDDEntity<Fruta>
     {

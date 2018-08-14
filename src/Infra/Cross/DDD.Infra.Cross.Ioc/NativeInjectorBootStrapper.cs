@@ -7,8 +7,8 @@ using DDD.Infra.Cross.Identity.Services;
 using DDD.Data.EF.Context;
 using DDD.Domain.Core.Interfaces.Repositories;
 using DDD.Data.EF.Repositories;
-using DDD.Domain.Test.Processos.Services;
 using DDD.Domain.Core.Interfaces.Services;
+using MentalClean.Domain.Questionario.Services;
 
 namespace PGLaw.Infra.Cross.IoC
 {
@@ -65,6 +65,7 @@ namespace PGLaw.Infra.Cross.IoC
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IGenericRepository, GenericRepository>();
             services.AddScoped<IGenericRepositoryRead, GenericRepository>();
+            services.AddScoped<IGenericRepositoryReadByName, GenericRepository>();
 
             // Repositorios de Contratos
             //services.AddScoped<IContratoUnitOfWork, ContratoUnitOfWork>();

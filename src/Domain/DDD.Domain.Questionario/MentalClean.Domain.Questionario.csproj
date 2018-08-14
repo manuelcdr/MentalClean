@@ -44,10 +44,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="automapper" Version="7.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\Infra\Cross\DDD.Infra.Cross.DomainDriver\DDD.Infra.Cross.DomainDriver.csproj" />
     <ProjectReference Include="..\DDD.Domain.Core\DDD.Domain.Core.csproj" />
   </ItemGroup>

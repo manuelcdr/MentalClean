@@ -1,6 +1,6 @@
 ﻿using DDD.Domain.Core.Abstracties.Entities;
 
-namespace DDD.Domain.Test.Processos.Entities
+namespace MentalClean.Domain.Questionario.Entities
 {
     public class Animal : DefaultEntity<Animal>
     {

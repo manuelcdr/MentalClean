@@ -4,6 +4,10 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="automapper" Version="7.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
@@ -13,6 +17,7 @@
     <ProjectReference Include="..\..\Infra\Cross\DDD.Infra.Cross.AspNetMvc\DDD.Infra.Cross.AspNetMvc.csproj" />
     <ProjectReference Include="..\..\Infra\Cross\DDD.Infra.Cross.DomainDriver.Mvc\DDD.Infra.Cross.DomainDriver.Mvc.csproj" />
     <ProjectReference Include="..\..\Infra\Cross\DDD.Infra.Cross.DomainDriver\DDD.Infra.Cross.DomainDriver.csproj" />
+    <ProjectReference Include="..\..\Infra\Cross\DDD.Infra.Cross.Ioc\DDD.Infra.Cross.Ioc.csproj" />
   </ItemGroup>
 
 </Project>

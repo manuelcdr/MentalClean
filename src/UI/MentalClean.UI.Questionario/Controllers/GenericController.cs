@@ -13,6 +13,7 @@ using System.Collections.Generic;
 
 namespace MentalClean.UI.Questionario.Controllers
 {
+    [Route("api")]
     public class GenericController : ControllerBase
     {
         private readonly IGenericRepositoryReadByName repositoryRead;

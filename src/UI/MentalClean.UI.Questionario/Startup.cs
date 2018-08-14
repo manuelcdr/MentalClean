@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using DDD.Infra.Cross.DomainDriver;
+using MentalClean.UI.Questionario.AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -9,6 +12,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PGLaw.Infra.Cross.IoC;
 
 namespace MentalClean.UI.Questionario
 {
@@ -31,6 +35,14 @@ namespace MentalClean.UI.Questionario
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            Driver.Initialize("IbC");
+
+            Mapper.Initialize(config =>
+            {
+                config.AddProfile(new AutoMapperProfile());
+            });
+
+            NativeInjectorBootStrapper.RegisterServices(services);
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

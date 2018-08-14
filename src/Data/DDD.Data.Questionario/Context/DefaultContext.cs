@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using DDD.Domain.Test.Processos.Entities;
 using DDD.Infra.Base.Data.EF;
 using DDD.Data.EF.EntityConfigs;
+using MentalClean.Domain.Questionario.Entities;
 
 namespace DDD.Data.EF.Context
 {

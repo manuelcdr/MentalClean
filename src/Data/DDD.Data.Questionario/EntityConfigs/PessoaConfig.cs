@@ -1,5 +1,5 @@
-﻿using DDD.Domain.Test.Processos.Entities;
-using DDD.Infra.Base.Data.EF;
+﻿using DDD.Infra.Base.Data.EF;
+using MentalClean.Domain.Questionario.Entities;
 
 namespace DDD.Data.EF.EntityConfigs
 {
