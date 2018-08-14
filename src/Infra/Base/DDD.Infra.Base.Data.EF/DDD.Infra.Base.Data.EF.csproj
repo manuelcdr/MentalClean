@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>DDD.Infra.Base.Data.EF</AssemblyName>
+    <RootNamespace>DDD.Infra.Base.Data.EF</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Base.csproj.vspscc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="microsoft.EntityFrameworkCore.SqlServer" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Cross\DDD.Infra.Cross.DomainDriver\DDD.Infra.Cross.DomainDriver.csproj" />
+    <ProjectReference Include="..\..\..\Domain\DDD.Domain.Core\DDD.Domain.Core.csproj" />
+    <ProjectReference Include="..\..\Cross\DDD.Infra.Cross.Common\DDD.Infra.Cross.Common.csproj" />
+  </ItemGroup>
+
+</Project>

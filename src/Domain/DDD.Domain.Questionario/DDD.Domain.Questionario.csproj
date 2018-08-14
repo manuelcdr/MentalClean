@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>DDD.Domain.Questionario</AssemblyName>
+    <RootNamespace>DDD.Domain.Questionario</RootNamespace>
+  </PropertyGroup>
+
+  <!--<ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" PrivateAssets="All" />
+  </ItemGroup>-->
+  
+  <ItemGroup>
+    <Compile Remove="Entities\GrupoAndamento.cs" />
+    <Compile Remove="Entities\ProcessoAndamento.cs" />
+    <Compile Remove="Entities\ProcessoCumprimento.cs" />
+    <Compile Remove="Entities\ProcessoCusta.cs" />
+    <Compile Remove="Entities\ProcessoDeposito.cs" />
+    <Compile Remove="Entities\ProcessoOcorrencia.cs" />
+    <Compile Remove="Entities\ProcessoPedido.cs" />
+    <Compile Remove="Entities\ProcessoPrazo.cs" />
+    <Compile Remove="Entities\ProcessoProvidencia.cs" />
+    <Compile Remove="Entities\TipoAcao.cs" />
+    <Compile Remove="Entities\TipoCusta.cs" />
+    <Compile Remove="Entities\TipoDocumento.cs" />
+    <Compile Remove="Entities\TipoJustica.cs" />
+    <Compile Remove="Entities\TipoNatureza.cs" />
+    <Compile Remove="Entities\TipoPrazo.cs" />
+    <Compile Remove="Entities\TipoProvidencia.cs" />
+    <Compile Remove="Entities\TipoProvidenciaEnquadramento.cs" />
+    <Compile Remove="Entities\TipoRelacao.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Juridico.csproj.vspscc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="automapper" Version="7.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infra\Cross\DDD.Infra.Cross.DomainDriver\DDD.Infra.Cross.DomainDriver.csproj" />
+    <ProjectReference Include="..\DDD.Domain.Core\DDD.Domain.Core.csproj" />
+  </ItemGroup>
+
+</Project>

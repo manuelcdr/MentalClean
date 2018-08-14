@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>DDD.Domain.Core</AssemblyName>
+    <RootNamespace>DDD.Domain.Core</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DomainServices\**" />
+    <EmbeddedResource Remove="DomainServices\**" />
+    <None Remove="DomainServices\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Interfaces\Repositories\IRepository.cs" />
+    <Compile Remove="Interfaces\Repositories\IRepositoryRead.cs" />
+    <Compile Remove="Interfaces\Repositories\IRepositoryWrite.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infra\Cross\DDD.Infra.Cross.Common\DDD.Infra.Cross.Common.csproj" />
+  </ItemGroup>
+
+</Project>
