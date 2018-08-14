@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>DDD.Infra.Cross.AspNetMvc</AssemblyName>
+    <RootNamespace>DDD.Infra.Cross.AspNetMvc</RootNamespace>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="elmah.io.client" Version="3.2.53" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Runtime" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DDD.Infra.Cross.Common\DDD.Infra.Cross.Common.csproj" />
+    <ProjectReference Include="..\DDD.Infra.Cross.Identity\DDD.Infra.Cross.Identity.csproj" />
+  </ItemGroup>
+
+</Project>
