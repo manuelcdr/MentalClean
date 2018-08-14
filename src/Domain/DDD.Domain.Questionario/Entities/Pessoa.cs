@@ -1,9 +1,6 @@
 ﻿using DDD.Domain.Core.Abstracties.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace DDD.Domain.Test.Processos.Entities
+namespace MentalClean.Domain.Questionario.Entities
 {
     public class Pessoa : DefaultEntity<Pessoa>
     {

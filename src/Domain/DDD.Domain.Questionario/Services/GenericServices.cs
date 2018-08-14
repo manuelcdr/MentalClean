@@ -3,7 +3,7 @@ using DDD.Domain.Core.Interfaces.Repositories;
 using DDD.Domain.Core.Interfaces.Services;
 using System;
 
-namespace DDD.Domain.Test.Processos.Services
+namespace MentalClean.Domain.Questionario.Services
 {
     public class GenericService : IGenericDomainService
     {

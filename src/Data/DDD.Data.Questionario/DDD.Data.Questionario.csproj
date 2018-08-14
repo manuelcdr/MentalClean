@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Domain\DDD.Domain.Questionario\DDD.Domain.Questionario.csproj" />
+    <ProjectReference Include="..\..\Domain\DDD.Domain.Questionario\MentalClean.Domain.Questionario.csproj" />
     <ProjectReference Include="..\..\Infra\Base\DDD.Infra.Base.Data.EF\DDD.Infra.Base.Data.EF.csproj" />
   </ItemGroup>
 
