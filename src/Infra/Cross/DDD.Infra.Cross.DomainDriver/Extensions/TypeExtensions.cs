@@ -95,7 +95,7 @@ namespace DDD.Infra.Cross.DomainDriver.Extensions
 
         public static Object CreateInstance(this Type type, params object[] @params)
         {
-            return type.TypeInitializer.Invoke(@params);
+            return Activator.CreateInstance(type, @params);
         }
 
         public static DriverAction GetAcceptDriverActions(this Type type)
