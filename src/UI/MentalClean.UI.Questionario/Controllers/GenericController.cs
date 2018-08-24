@@ -97,14 +97,13 @@ namespace MentalClean.UI.Questionario.Controllers
         public IActionResult PostLot(string objectName, [FromBody] object value)
         {
             ModelState.Clear();
+            var domainType = Driver.GetDomainType(objectName);
 
-            var vmType = Driver.GetRefType("ViewModel", objectName, DriverAction.Insert);
+            var vmType = Driver.GetRefType("ViewModel", domainType, DriverAction.Insert);
             if (vmType == null)
                 return NotFound();
 
-            var domainType = Driver.GetDomainType(objectName);
-            var stringJsonObject = JsonConvert.SerializeObject(value);
-            var models = JsonConvert.DeserializeObject(stringJsonObject, typeof(IEnumerable<>).MakeGenericType(vmType)) as IEnumerable<object>;
+            var models = BindModel(value, vmType) as IEnumerable<object>;
 
             foreach (var model in models)
             {
@@ -124,15 +123,13 @@ namespace MentalClean.UI.Questionario.Controllers
         public IActionResult Put(string objectName, Guid id, [FromBody] object value)
         {
             ModelState.Clear();
+            var domainType = Driver.GetDomainType(objectName);
 
-            var vmType = Driver.GetRefType("ViewModel", objectName, DriverAction.Update);
+            var vmType = Driver.GetRefType("ViewModel", domainType, DriverAction.Update);
             if (vmType == null)
                 return NotFound();
 
-            var domainType = Driver.GetDomainType(objectName);
-
-            var stringJsonObject = JsonConvert.SerializeObject(value);
-            var model = JsonConvert.DeserializeObject(stringJsonObject, vmType);
+            var model = BindModel(value, vmType);
 
             if (TryValidateModel(model))
             {
@@ -149,17 +146,15 @@ namespace MentalClean.UI.Questionario.Controllers
         public IActionResult Put(string objectName, [FromBody] object value)
         {
             ModelState.Clear();
+            var domainType = Driver.GetDomainType(objectName);
 
-            var vmType = Driver.GetRefType("ViewModel", objectName, DriverAction.Update);
+            var vmType = Driver.GetRefType("ViewModel", domainType, DriverAction.Update);
             if (vmType == null)
                 return NotFound();
 
-            var domainType = Driver.GetDomainType(objectName);
+            var models = BindModel(value, vmType) as IEnumerable<object>;
 
-            var stringJsonObject = JsonConvert.SerializeObject(value);
-            var models = JsonConvert.DeserializeObject(stringJsonObject, typeof(IEnumerable<>).MakeGenericType(vmType));
-
-            foreach (var model in models as IEnumerable<object>)
+            foreach (var model in models)
             {
                 if (!TryValidateModel(model))
                     return ResponseApi(models);

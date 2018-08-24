@@ -36,14 +36,14 @@ namespace DDD.Infra.Cross.DomainDriver.Attributes
     [Flags]
     public enum DriverAction
     {
-        None = 0,
-        GetSingle = 1,
-        GetAll = 2,
-        Insert = 4,
-        Update = 8,
-        Delete = 16,
-        Activate = 32,
-        Deactivate = 64,
-        GetActives = 128
+        None        = 0,
+        GetSingle   = 1 << 0,
+        GetAll      = 1 << 1,
+        Insert      = 1 << 2,
+        Update      = 1 << 3,
+        Delete      = 1 << 4,
+        Activate    = 1 << 5,
+        Deactivate  = 1 << 6,
+        GetActives  = 1 << 7
     }
 }

@@ -4,12 +4,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using DDD.Infra.Cross.DomainDriver;
+using DDD.Infra.Cross.Identity.Data;
 using MentalClean.UI.Questionario.AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PGLaw.Infra.Cross.IoC;
@@ -35,6 +38,8 @@ namespace MentalClean.UI.Questionario
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
             Driver.Initialize("IbC");
 
             Mapper.Initialize(config =>
@@ -42,9 +47,13 @@ namespace MentalClean.UI.Questionario
                 config.AddProfile(new AutoMapperProfile());
             });
 
-            NativeInjectorBootStrapper.RegisterServices(services);
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDefaultIdentity<IdentityUser>()
+                .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            NativeInjectorBootStrapper.RegisterServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

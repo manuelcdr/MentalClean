@@ -9,6 +9,11 @@ namespace MentalClean.UI.Questionario.Models
     [AcceptDriverActions(DriverAction.GetSingle, DriverAction.GetAll, DriverAction.GetActives, DriverAction.Insert)]
     public class FrutaVM
     {
+        public FrutaVM()
+        {
+            Id = Guid.NewGuid();
+        }
+
         public Guid Id { get; set; }
 
         [Required]
@@ -22,6 +27,10 @@ namespace MentalClean.UI.Questionario.Models
     [AcceptDriverActions(DriverAction.Update)]
     public class FrutaUpdateVM
     {
+        public FrutaUpdateVM()
+        {
+        }
+
         [Required]
         public string Nome { get; set; }
 

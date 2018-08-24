@@ -16,6 +16,7 @@ namespace MentalClean.UI.Questionario.Controllers
             return View();
         }
 
+        [HttpGet("about")]
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
@@ -23,6 +24,7 @@ namespace MentalClean.UI.Questionario.Controllers
             return View();
         }
 
+        [HttpGet("contact")]
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
@@ -30,6 +32,7 @@ namespace MentalClean.UI.Questionario.Controllers
             return View();
         }
 
+        [HttpGet("privacy")]
         public IActionResult Privacy()
         {
             return View();

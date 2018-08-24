@@ -4,7 +4,7 @@ using DDD.Infra.Cross.DomainDriver.Attributes;
 using MentalClean.Domain.Questionario.Entities;
 using System;
 
-namespace DDD.Api.Test.Models
+namespace MentalClean.UI.Questionario.Models
 {
     [EntityReference(typeof(Fruta), typeof(Animal))]
     [AcceptDriverActions]

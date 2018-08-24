@@ -10,7 +10,13 @@
 
   <ItemGroup>
     <PackageReference Include="automapper" Version="7.0.1" />
+    <PackageReference Include="microsoft.AspNetCore" Version="2.1.3" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="microsoft.AspNetCore.CookiePolicy" Version="2.1.2" />
+    <PackageReference Include="microsoft.AspNetCore.HttpsPolicy" Version="2.1.1" />
+    <PackageReference Include="microsoft.AspNetCore.Mvc" Version="2.1.2" />
+    <PackageReference Include="microsoft.AspNetCore.StaticFiles" Version="2.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,6 +24,21 @@
     <ProjectReference Include="..\..\Infra\Cross\DDD.Infra.Cross.DomainDriver.Mvc\DDD.Infra.Cross.DomainDriver.Mvc.csproj" />
     <ProjectReference Include="..\..\Infra\Cross\DDD.Infra.Cross.DomainDriver\DDD.Infra.Cross.DomainDriver.csproj" />
     <ProjectReference Include="..\..\Infra\Cross\DDD.Infra.Cross.Ioc\DDD.Infra.Cross.Ioc.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\Shared\Animal\Edit.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Shared\Animal\List.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Shared\Animal\New.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Shared\Fruta\New.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
   </ItemGroup>
 
 </Project>
