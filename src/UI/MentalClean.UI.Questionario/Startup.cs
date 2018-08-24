@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using DDD.Infra.Cross.DomainDriver;
 using DDD.Infra.Cross.Identity.Data;
+using DDD.Infra.Cross.Identity.Models;
 using MentalClean.UI.Questionario.AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -47,11 +48,11 @@ namespace MentalClean.UI.Questionario
                 config.AddProfile(new AutoMapperProfile());
             });
 
-            services.AddDbContext<ApplicationDbContext>(options =>
+            services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>()
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddDefaultIdentity<AppUser>()
+                .AddEntityFrameworkStores<AppDbContext>();
 
             NativeInjectorBootStrapper.RegisterServices(services);
         }
