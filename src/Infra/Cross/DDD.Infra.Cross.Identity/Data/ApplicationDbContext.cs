@@ -5,9 +5,9 @@ using System;
 
 namespace DDD.Infra.Cross.Identity.Data
 {
-    public class ApplicationDbContext : IdentityDbContext<AppUser, AppRole, Guid>
+    public class AppDbContext : IdentityDbContext<AppUser, AppRole, Guid>
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        public AppDbContext(DbContextOptions<AppDbContext> options)
             : base(options)
         {
         }
